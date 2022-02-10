@@ -12,8 +12,11 @@ class Activity2 : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_2)
         Log.d("act2", "Act2 created")
+
         val name = intent.getStringExtra("name")
-        Log.d("act2", "$name")
+        findViewById<TextView>(R.id.text_center).apply{
+            text = "Hello " + name.toString()
+        }
 
     }
 }
