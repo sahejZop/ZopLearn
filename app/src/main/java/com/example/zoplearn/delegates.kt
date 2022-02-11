@@ -1,5 +1,6 @@
 package com.example.zoplearn
 
+import kotlin.properties.Delegates
 import kotlin.lazy as lazy1
 
 interface base{
@@ -14,7 +15,7 @@ class baseImplemented(val x: Int): base{
 
 class baseImplemented2(val x: Int): base{
     override fun print(){
-        print("2 $x")
+        println("2 $x")
     }
 }
 
@@ -33,7 +34,16 @@ fun main()
     val lazyValue: String by lazy1()
     {
         // Printing to standard output
-        println("GeeksforGeeks")
+        println("print default")
         "hello"
     }
+
+    println(lazyValue)
+
+    var n1: Int by Delegates.observable(10){
+        property, oldValue, newValue ->
+        println("oldValue was: $oldValue")
+        println("newValue is : $newValue")
+    }
+    n1 = 5
 }
