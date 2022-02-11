@@ -15,6 +15,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         Log.d("MainActivity", "onCreate Called")
         setContentView(R.layout.activity_main)
+
         var name:EditText = findViewById(R.id.name)
         val bt1: Button = findViewById(R.id.bt)
 
@@ -26,6 +27,7 @@ class MainActivity : AppCompatActivity() {
                 startActivity(activity2Intent)
             }
         })*/
+
         bt1.setOnClickListener(View.OnClickListener { v->
             Log.d("MainActivity", "Button Clicked")
             val activity2Intent = Intent(applicationContext, Activity2::class.java)
