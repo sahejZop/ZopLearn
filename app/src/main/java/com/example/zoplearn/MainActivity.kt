@@ -1,6 +1,5 @@
 package com.example.zoplearn
 
-
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
@@ -8,7 +7,6 @@ import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
-
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -28,7 +26,7 @@ class MainActivity : AppCompatActivity() {
             }
         })*/
 
-        bt1.setOnClickListener(View.OnClickListener { v->
+        bt1.setOnClickListener(View.OnClickListener {
             Log.d("MainActivity", "Button Clicked")
             val activity2Intent = Intent(applicationContext, Activity2::class.java)
             activity2Intent.putExtra("name", name.text.toString())

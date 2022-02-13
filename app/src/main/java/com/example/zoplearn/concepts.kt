@@ -19,7 +19,7 @@ fun multiply(x: Int, y:Int) = x*y
 fun divide(x: Int, y: Int) = x/y
 
 inline fun print_years_till_2100(a: Int, fn: (Int) -> Int){
-    var total_years = fn(a)
+    val total_years = fn(a)
     println("$total_years till the year 2100")
 }
 
